@@ -1,0 +1,39 @@
+Emacs.FontBackend: xft
+!Emacs.toolBar: 0
+
+Xft.dpi:                    96
+Xft.antialias:              true
+Xft.rgba:                   rgb
+Xft.hinting:                true
+Xft.hintstyle:              hintfull
+
+!XTerm.font:		xft:Inconsolata:pixelsize=16:style=Medium
+!XTerm.boldFont:		xft:Inconsolata:pixelsize=16:style=Medium
+xterm*termName: xterm-256color
+!XTerm*faceName:	Px437 IBM PS/2thin4:pixelsize=16
+XTerm*faceName:	DejaVu Sans Mono Mono:style=regular:size=10
+XTerm*allowBoldFonts: false
+XTerm.scrollBar:	false
+
+XTerm*background: 		#2e3436
+XTerm*foreground:  		#ffffff
+
+XTerm*color0: #2e3436
+XTerm*color1: #CC0000
+XTerm*color2: #4E9A06
+XTerm*color3: #C4A000
+XTerm*color4: #3465A4
+XTerm*color5: #00cc00
+XTerm*color6: #3465a4
+XTerm*color7: #D3D7CF
+XTerm*color8: #555753
+XTerm*color9: #EF2929
+XTerm*color10: #8AE234
+XTerm*color11: #FCE94F
+XTerm*color12: #729fcf
+XTerm*color13: #00cc00
+XTerm*color14: #34E2E2
+XTerm*color15: #EEEEEC
+
+
+XTerm*metaSendsEscape: true
