@@ -14,8 +14,9 @@ pavucontrol
 python
 python2
 sdl
-steam
 sudo
 unzip
+networkmanager
+network-manager-applet
 xorg
 xorg-xinit
