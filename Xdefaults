@@ -11,7 +11,7 @@ Xft.hintstyle:              hintfull
 !XTerm.boldFont:		xft:Inconsolata:pixelsize=16:style=Medium
 xterm*termName: xterm-256color
 !XTerm*faceName:	Px437 IBM PS/2thin4:pixelsize=16
-XTerm*faceName:	DejaVu Sans Mono Mono:style=regular:size=10
+XTerm*faceName:	DejaVu Sans Mono:style=regular:size=10
 XTerm*allowBoldFonts: false
 XTerm.scrollBar:	false
 
