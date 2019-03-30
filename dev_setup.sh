@@ -14,8 +14,10 @@ do
 	cd ..
 done < AUR.list
 
+mkdir ~/.emacs.d
+
 # Setup configuration files
-rm ~/.xinitrc ~/.bashrc ~/.Xdefaults ~/.emacs.d/init.el
+rm -f ~/.xinitrc ~/.bashrc ~/.Xdefaults ~/.emacs.d/init.el
 ln xinitrc ~/.xinitrc
 ln bashrc ~/.bashrc
 ln Xdefaults ~/.Xdefaults
@@ -23,3 +25,6 @@ ln init.el ~/.emacs.d/init.el
 
 # Enable Daemons
 systemctl enable --user emacs
+
+# Generate ssh key
+ssh-keygen -t rsa -b 2048 -f ~/.ssh/id_rsa -q -N ""

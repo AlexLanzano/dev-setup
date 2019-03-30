@@ -10,6 +10,7 @@ i3-wm
 i3blocks
 i3lock
 i3status
+pulseaudio
 pavucontrol
 python
 python2
@@ -17,5 +18,9 @@ sdl
 sudo
 unzip
 netctl
+wpa_supplicant
+xterm
 xorg
 xorg-xinit
+ttf-dejavu
+openssh
