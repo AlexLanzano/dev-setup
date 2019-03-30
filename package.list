@@ -16,7 +16,6 @@ python2
 sdl
 sudo
 unzip
-networkmanager
-network-manager-applet
+netctl
 xorg
 xorg-xinit

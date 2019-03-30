@@ -23,4 +23,3 @@ ln init.el ~/.emacs.d/init.el
 
 # Enable Daemons
 systemctl enable --user emacs
-systemctl enable networkmanager
