@@ -1,7 +1,7 @@
 #! /bin/bash
 
 # Install Packages
-sudo pacman -S --needed - < package.list
+sudo pacman --noconfirm -S --needed - < package.list
 
 # Install AUR packages
 while read url
@@ -14,7 +14,9 @@ do
 	cd ..
 done < AUR.list
 
-mkdir ~/.emacs.d
+# Make needed directories
+mkdir -p ~/.emacs.d
+mkdir -p ~/.config/i3
 
 # Setup configuration files
 rm -f ~/.xinitrc ~/.bashrc ~/.Xdefaults ~/.emacs.d/init.el
@@ -22,9 +24,13 @@ ln xinitrc ~/.xinitrc
 ln bashrc ~/.bashrc
 ln Xdefaults ~/.Xdefaults
 ln init.el ~/.emacs.d/init.el
+ln i3-config ~/.config/i3/config
 
-# Enable Daemons
+# Start/Enable Daemons
+systemctl start --user emacs
 systemctl enable --user emacs
+sudo systemctl start sshd
+sudo systemctl enable sshd
 
 # Generate ssh key
 ssh-keygen -t rsa -b 2048 -f ~/.ssh/id_rsa -q -N ""
