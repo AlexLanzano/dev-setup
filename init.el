@@ -4,7 +4,10 @@
 ;; Programming Settings
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4) ; Assuming you want your tabs to be four spaces wide
+(setq-default c-basic-offset 4)
 (electric-pair-mode 1)
+(setq verilog-auto-newline nil)
+;;(add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 ;; Mouse Settings
 (setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ;; one line at a time
