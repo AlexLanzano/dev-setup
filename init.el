@@ -7,6 +7,8 @@
 (setq-default c-basic-offset 4)
 (electric-pair-mode 1)
 (setq verilog-auto-newline nil)
+(setq verilog-auto-lineup nil)
+(setq verilog-auto-endcomments nil)
 ;;(add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 ;; Mouse Settings
