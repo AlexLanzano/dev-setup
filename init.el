@@ -78,3 +78,13 @@
 (global-set-key (kbd "C-c d") 'kill-whole-line)
 (global-set-key (kbd "C-c s") 'search-selection)
 (global-set-key (kbd "C-c a") 'duplicate-line)
+
+;; Add MELPA
+(require 'package)
+(add-to-list 'package-archives
+             '("melpa" . "https://melpa.org/packages/") t)
+(package-initialize)
+(package-refresh-contents)
+
+;; Load rust-mode
+(require 'rust-mode)

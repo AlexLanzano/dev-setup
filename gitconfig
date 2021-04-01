@@ -1,0 +1,9 @@
+[user]
+	email = lanzano.alex@gmail.com
+	name = Alex Lanzano
+[core]
+	editor = emacs -nw
+[alias]
+    mnc = merge --no-commit
+    amend = commit --amend --no-edit
+    

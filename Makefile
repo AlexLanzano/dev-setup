@@ -18,12 +18,13 @@ install-packages:
 .PHONY: install-config
 install-config:
 	mkdir -p ~/.emacs.d ~/.config/i3
-	rm -f ~/.xinitrc ~/.bashrc ~/.Xdefaults ~/.emacs.d/init.el ~/.config/i3/config
+	rm -f ~/.xinitrc ~/.bashrc ~/.Xdefaults ~/.emacs.d/init.el ~/.config/i3/config ~/.gitconfig
 	ln xinitrc ~/.xinitrc
 	ln bashrc ~/.bashrc
 	ln Xdefaults ~/.Xdefaults
 	ln init.el ~/.emacs.d/init.el
 	ln i3-config ~/.config/i3/config
+	ln gitconfig ~/.gitconfig
 
 .PHONY: enable-daemons
 enable-daemons:
