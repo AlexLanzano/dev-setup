@@ -9,7 +9,8 @@
 (setq verilog-auto-newline nil)
 (setq verilog-auto-lineup nil)
 (setq verilog-auto-endcomments nil)
-;;(add-hook 'before-save-hook 'delete-trailing-whitespace)
+(add-hook 'org-mode-hook (lambda () (electric-indent-local-mode -1)))
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 ;; Mouse Settings
 (setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ;; one line at a time
