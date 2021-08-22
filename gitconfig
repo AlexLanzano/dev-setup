@@ -6,4 +6,6 @@
 [alias]
     mnc = merge --no-commit
     amend = commit --amend --no-edit
-    
+    show-url = "!f() {\
+                    git config --get remote.$1.url;\
+                }; f"
