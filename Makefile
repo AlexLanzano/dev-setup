@@ -1,19 +1,4 @@
-all: install-packages install-config enable-daemons generate-ssh-key
-
-# TODO: Install AUR packages
-# while read url
-# do
-# 	git clone $url
-# 	package="$(echo $url | grep -o '[^/]*$')"
-# 	package="$(cut -d "." -f 1 <<< $package)"
-# 	cd $package
-# 	makepkg -si
-# 	cd ..
-# done < AUR.list
-
-.PHONY: install-packages
-install-packages:
-	sudo pacman --noconfirm -S --needed - < package.list
+all: install-config enable-daemons generate-ssh-key
 
 .PHONY: install-config
 install-config:

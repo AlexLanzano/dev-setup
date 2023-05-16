@@ -50,7 +50,7 @@
   (interactive "r")
   (kill-ring-save beg end)
   (isearch-mode t nil nil nil)
-  (isearch-yank-pop)
+  (isearch-yank-pop-only)
 )
 
 (defun duplicate-line()
@@ -80,12 +80,38 @@
 (global-set-key (kbd "C-c s") 'search-selection)
 (global-set-key (kbd "C-c a") 'duplicate-line)
 
-;; Add MELPA
-(require 'package)
-(add-to-list 'package-archives
-             '("melpa" . "https://melpa.org/packages/") t)
-(package-initialize)
-(package-refresh-contents)
 
-;; Load rust-mode
-(require 'rust-mode)
+;; Package Settings
+(use-package projectile
+  :init
+  (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+  :config
+  (projectile-mode +1)
+)
+
+(use-package counsel
+  :config
+  (ivy-mode 1)
+)
+
+(use-package corfu
+  :init
+  (setq corfu-auto t)
+  (setq corfu-cycle t)
+  (setq corfu-auto-delay 0.0)
+  (setq corfu-auto-select-prefix nil)
+  (setq corfu-auto-select-symbols nil)
+  (setq completion-styles `(basic))
+  (setq completion-min-prefix-length 2)
+  (setq corfu-auto-prefix 1)
+  :config
+  (global-corfu-mode)
+)
+(unless (display-graphic-p)
+  (corfu-terminal-mode +1))
+
+(use-package cape
+  :init
+  (add-to-list 'completion-at-point-functions #'cape-dabbrev)
+  (setq cape-dabbrev-min-length 2)
+)
