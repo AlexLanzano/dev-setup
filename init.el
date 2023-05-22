@@ -1,5 +1,6 @@
 ;; Miscellaneous Settings
 (setq make-backup-files nil)
+(setq select-enable-primary t)
 
 ;; Programming Settings
 (setq-default indent-tabs-mode nil)
@@ -35,7 +36,7 @@
 (set-face-attribute 'font-lock-variable-name-face nil :foreground "#c4a000")
 (set-face-attribute 'font-lock-warning-face nil :foreground "#ff0000")
 (if (display-graphic-p)
-	(set-face-attribute 'default nil :background "#2f3537")
+	(set-face-attribute 'default nil :background "#252525")
 	)
 (set-face-attribute 'default nil :foreground "#ffffff")
 (set-face-attribute 'mode-line nil :foreground "White" :background "#285577")
@@ -80,12 +81,13 @@
 (global-set-key (kbd "C-c s") 'search-selection)
 (global-set-key (kbd "C-c a") 'duplicate-line)
 
+(global-unset-key (kbd "C-n"))
+;; (global-set-key (kbd "<return>") 'newline)
 
 ;; Package Settings
 (use-package projectile
-  :init
-  (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
   :config
+  (define-key projectile-mode-map (kbd "C-p") 'projectile-command-map)
   (projectile-mode +1)
 )
 
@@ -114,4 +116,12 @@
   :init
   (add-to-list 'completion-at-point-functions #'cape-dabbrev)
   (setq cape-dabbrev-min-length 2)
+)
+
+(use-package magit
+  :init
+  (global-set-key (kbd "C-n s") 'magit-status)
+  (global-set-key (kbd "C-n c") 'magit-commit)
+  (global-set-key (kbd "C-n a") 'magit-commit)
+  (global-set-key (kbd "C-n r") 'magit-rebase)
 )
