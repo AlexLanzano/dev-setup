@@ -12,7 +12,8 @@ XTerm*allowBoldFonts: false
 XTerm.scrollBar:	false
 
 !XTerm*background: 		#2e3436
-XTerm*background: 		#252525
+!XTerm*background: 		#252525
+XTerm*background: 		#282c34
 XTerm*foreground:  		#ffffff
 
 XTerm*color0: #2e3436
@@ -35,7 +36,9 @@ XTerm*color15: #EEEEEC
 
 XTerm*metaSendsEscape: true
 
-XTerm*ttyModes:         erase ^?
-XTerm*VT100.Translations: \
-        #override <Key>BackSpace: string(0x7f) \n\
-		  <Key>Delete:    string(0x1b) string("[3~")
+!XTerm*ttyModes:         erase ^?
+!XTerm*VT100.Translations: \
+!        #override <Key>BackSpace: string(0x7f) \n\
+!	  <Key>Delete:    string(0x1b) string("[3~")
+!XTerm.VT100.translations: #override \
+!    Ctrl<Key>semicolon:    string(0x1b) string("[1;2P")

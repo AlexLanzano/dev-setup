@@ -10,6 +10,7 @@ install-config:
 	ln init.el ~/.emacs.d/init.el
 	ln i3-config ~/.config/i3/config
 	ln gitconfig ~/.gitconfig
+	ln tmux.conf ~/.tmux.conf
 
 .PHONY: enable-daemons
 enable-daemons:
